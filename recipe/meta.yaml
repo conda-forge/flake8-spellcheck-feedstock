@@ -1,5 +1,5 @@
 {% set name = "flake8-spellcheck" %}
-{% set version = "0.24.0" %}
+{% set version = "0.25.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flake8-spellcheck-{{ version }}.tar.gz
-  sha256: 833c92222158b5dea74f858ccfb9f980b7c865fbd89cabc18447dadb07ec62e6
+  sha256: 17e539e9299dcc595f812e9f7233e12c413bdd4b2e614621aaa06e289605bb6a
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ test:
     - flake8_spellcheck
   commands:
     - pip check
-    - 'flake8 --version | grep flake8-spellcheck'
+    - flake8 --version | grep flake8-spellcheck
   requires:
     - flake8
     - m2-grep  # [win]
