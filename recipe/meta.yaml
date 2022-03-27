@@ -1,5 +1,5 @@
 {% set name = "flake8-spellcheck" %}
-{% set version = "0.25.0" %}
+{% set version = "0.26.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flake8-spellcheck-{{ version }}.tar.gz
-  sha256: 17e539e9299dcc595f812e9f7233e12c413bdd4b2e614621aaa06e289605bb6a
+  sha256: 882de0b5c374fa9312ea4165f71f5583e6f4616f1661c5598378353df50796f4
 
 build:
   noarch: python
