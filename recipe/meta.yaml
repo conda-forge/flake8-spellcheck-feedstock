@@ -18,10 +18,10 @@ build:
 requirements:
   host:
     - pip
+    - poetry-core >=1.0.0
     - python >=3.6
   run:
     - flake8 >3.0.0
-    - importlib_resources >=3
     - python >=3.6
 
 test:
