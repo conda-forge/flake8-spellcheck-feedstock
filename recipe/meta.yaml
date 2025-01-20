@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flake8-spellcheck-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flake8-spellcheck-{{ version }}.tar.gz
   sha256: 6fb79724f27097af0b4c678c7eaf731f0d87cf4c1eae7fbd7836c1c78d67e12c
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - flake8 >3.0.0
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -34,6 +34,7 @@ test:
     - flake8
     - m2-grep  # [win]
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/MichaelAquilina/flake8-spellcheck
